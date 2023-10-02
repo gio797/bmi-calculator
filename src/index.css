@@ -8,8 +8,11 @@ body {
   background-color: floralwhite;
 }
 
-.App {
-  padding: 1rem;
+.header {
+  background: linear-gradient(90deg, #fafeff 0%, #d1e1f8 100%);
+  text-align: center;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
 
 form {
