@@ -6,6 +6,13 @@ body {
   margin: 0;
   padding: 0;
   background-color: floralwhite;
+  font-family: "Young Serif", serif;
+  color: #253449;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
 }
 
 .header {
@@ -13,11 +20,59 @@ body {
   text-align: center;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
+  height: 500px;
+  position: relative;
+  padding: 20px;
 }
 
 form {
   display: flex;
+  gap: 10px;
   flex-direction: column;
   background-color: white;
   padding: 1rem;
+  position: absolute;
+  top: 350px;
+  margin: 20px;
+  border-radius: 30px;
+}
+
+.result {
+  background: linear-gradient(
+    90deg,
+    rgba(54, 95, 247, 1) 0%,
+    rgba(88, 124, 255, 1) 100%
+  );
+  color: whitesmoke;
+  border-radius: 20px;
+  padding: 0 20px;
+  margin-top: 20px;
+}
+
+.result span {
+  font-size: 28px;
+}
+
+input {
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 22px;
+  color: inherit;
+}
+
+@media only screen and (min-width: 600px) {
+  .result {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+  }
+
+  form {
+    top: 250px;
+  }
 }

@@ -37,14 +37,6 @@ function App() {
       </div>
       <form>
         <h2>Enter your details below</h2>
-        <label htmlFor="metric">
-          <input type="radio" id="metric" name="system" />
-          Metric
-        </label>
-        <label htmlFor="imperial">
-          <input type="radio" id="imperial" name="system" />
-          Imperial
-        </label>
 
         <label htmlFor="height">Height</label>
         <input
@@ -64,13 +56,14 @@ function App() {
           value={mass}
           onChange={(e) => setMass(Number(e.target.value))}
         />
+        <div className="result">
+          <p>
+            Your BMI is <br />
+            <span>{BMI.toFixed(2)}</span>
+          </p>
+          <p>Your BMI suggests you're a {setBMIResult()} weight</p>
+        </div>
       </form>
-      <div className="result">
-        <p>
-          Your BMI is <span>{BMI}</span>
-        </p>
-        `Your BMI suggests you're a {setBMIResult()} weight`
-      </div>
     </div>
   );
 }
